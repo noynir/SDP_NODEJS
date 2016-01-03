@@ -1,0 +1,49 @@
+//
+//"tags":["javascript","node.js","browserify"],"owner":{"reputation":1205,"user_id":2533082,"user_type":"registered","accept_rate":68,"profile_image":"https://www.gravatar.com/avatar/7097e6c465ed546a571fd85b9aa5e16c?s=128&d=identicon&r=PG","display_name":"Vinz243","link":"http://stackoverflow.com/users/2533082/vinz243"},"is_answered":true,"view_count":4704,"answer_count":6,"score":14,"last_activity_date":1432902598,"creation_date":1393258638,"last_edit_date":1394019140,"question_id":21993073,"link":"http://stackoverflow.com/questions/21993073/browserify-with-paths-to-folders-in-my-system","title":"Browserify with paths to folders in my system"}
+
+extends layout
+block header
+   h2=  "Node.JS Questions"
+block content
+   each item in data.items
+      div.item.clearfix
+         div
+            div.meta.pull-left
+               div.votes.text-center.pull-left
+                  span
+                     strong #{item.score}
+                  div.text-center votes
+               div.answers.text-center.text-danger.pull-left
+                  span
+                     strong #{item.answer_count}
+                  div.text-center answers
+               div.views.text-center.text-muted.pull-left
+                  span
+                     string #{item.view_count}
+                  div.text-center views
+            div.question.pull-left
+               div.title
+                  a.text-primary(href=item.link, target="_blank") !{item.title}
+               div.clearfix.qmeta
+                  div.pull-left.tags
+                     div.clearfix
+                        each tag in item.tags
+                           span.label.label-info #{tag}
+                  div.pull-right.profile
+                     div.clearfix
+                        div.pull-left
+                           a(href=item.owner.link,target="_blank")
+                              img.img-responsive(src=item.owner.profile_image)
+                        div.pull-left.username
+                           div
+                              a.text-info(href=item.owner.link,target="_blank") #{item.owner.display_name}
+block pager
+
+
+
+
+
+
+
+
+

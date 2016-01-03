@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      div.container-fluid
+        div.navbar-header
+          a.navbar-brand(href="/")
+            img(src="/images/nodejs.png")
+        ul.nav.navbar-nav
+          li(class= phase==="fs" ? "active" : "")
+            a(href="fs") File System
+          li(class= phase==="http" ? "active" : "")
+            a(href="http") HTTP
+          li(class= phase==="modules" ? "active" : "")
+            a(href="modules") Modules
+          li.dropdown(class= (phase==="start" || phase==="questions" || phase==="search") ? "active" : "")
+            a.dropdown-toggle(href="#",data-toggle="dropdown",role="button") Express
+              span.caret
+            ul.dropdown-menu(role="menu")
+              li(class= phase==="start" ? "active" : "")
+                a(href="start") Start
+              li(class= phase==="questions" ? "active" : "")
+                a(href="questions") Questions
+              li(class= phase==="search" ? "active" : "")
+                a(href="search") Search
+
+
+    div.container.main
+      block content
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+
+
+

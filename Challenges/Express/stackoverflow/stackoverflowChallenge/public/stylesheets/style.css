@@ -1,0 +1,83 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand {
+  padding:3px 15px;
+}
+.navbar-header img
+{
+  width: 111px;
+  height: 30px;
+}
+.main{
+  width: 768px;
+}
+.content{
+  width: 98%;
+  height: 500px;
+  padding: 2px;
+  border: solid 2px #e0e0e0;
+  border-radius: 3px;
+  overflow-y:scroll;
+}
+
+.content .item {
+  padding:8px 0px;
+  border-bottom: dashed 1px #eee;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.content .meta{
+  margin-right: 10px;
+  width: 25%;
+}
+
+.content .question{
+  width: 70%;
+}
+
+.content .question .title{
+  padding-bottom: 12px;
+}
+.content .votes,.content .answers,.content .views{
+  width: 55px;
+  height: 40px;
+  padding: 5px;
+  margin-left: 3px;
+  border: solid 1px #e0e0e0;
+  border-radius:10px;
+  font-size: 10px;
+}
+
+.question .tags{
+  margin-top: 10px;
+  width: 70%;
+
+}
+.question .tags .label{
+  display: block;
+  float: left;
+  margin-right: 3px;
+  margin-bottom: 3px;
+
+}
+
+.content .qmeta{
+  width: 100%;
+}
+.content .profile{
+  width: 30%;
+}
+.content .profile img {
+  height: 30px;
+  width: 30px;
+  border: solid 1px #bec2c9;
+}
+
+.content .profile .username{
+  margin-left: 8px;
+  font-size: 12px;
+}
+

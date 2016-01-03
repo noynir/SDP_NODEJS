@@ -1,0 +1,53 @@
+extends layout
+block content
+    :markdown
+        # Express Challenge - Phase 3 - Search
+
+        In this Phase you will be implementing a questions search.
+
+        1. **Form**
+            - look for the `layout.jade` file inside the views folder.
+
+            - In The Form located in the top nav bar add an Action attribute pointing to a
+            a new *search route*, and a `method="POST"` attribute.
+
+        2. **Route**
+            - for this phase you will need to use the body parser middlware.
+
+                - require it in your app. `var bodyParser=require('bodyParser')`
+                - you will only need the `urlencoded` Method, to use you can add the following line to your app.
+                `app.use(bodyParser.urlencoded({extended:false}))`
+                - for reading the POST data use the `req.body` property.
+
+            - create a router with the route */search* for use with get and post.
+
+            - your route handler should use the api module detailed in [Phase 2](/questions).
+
+            - you will need to use the searchQuestions method.
+            - both methods of the api module returns the same outpu so it's safe to use the same *questions* view.
+
+        ## Bonus Round
+
+        1. implement paging inside the `pager` block.
+
+        2. inside the questions View set a different Header for browse and search.
+
+    a.btn.btn-primary(href="/questions") &larr; Back
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

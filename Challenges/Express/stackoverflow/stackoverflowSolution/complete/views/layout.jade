@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      div.container-fluid
+        div.navbar-header
+          a.navbar-brand(href="/")
+            img(src="/images/nodejs.png")
+        ul.nav.navbar-nav
+          li
+            a(href="/questions") Questions
+          li
+            form.navbar-form.navbar-right(action="/search",method="POST")
+              div.form-group
+                input.form-control(placeholder="Search",type="text",name="q",value=q)
+              button.btn.btn-default(type="submit") Submit
+
+    div.container.main
+      div.page-header
+        block header
+      if (!hideContent)
+        div.content.center-block
+          block content
+        block pager
+
+

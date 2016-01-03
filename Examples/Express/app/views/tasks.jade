@@ -1,0 +1,20 @@
+extends layout
+block content
+	div
+		ul.list-group
+			each task in tasks
+				li.list-group-item
+					if task.completed
+						s=task.title
+					else
+						a=task.title
+	div
+		form.form-inline(method="post")
+			div.form-group
+				input.form-control(placeholder="Task title",type="text",name="title",required="")
+			div.form-group.checkbox
+				label
+					input(type="checkbox", value="true",name="completed")
+					| Completed?
+			button.btn.btn-default(type="submit") Submit
+	script(src="javascripts/tasks.js")

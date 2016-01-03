@@ -1,0 +1,14 @@
+html
+	head
+		title This a Jade Page
+	body
+		h1 This is a Jade Page
+		a(href="http://www.sela.co.il", target="_blank") Sela
+		p(style="color:blue")
+			| This a multi line paragragh
+			| THis line 2 
+			| This is line 3
+		ul
+			each product in products
+				li
+					b=product 
