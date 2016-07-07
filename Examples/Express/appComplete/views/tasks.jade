@@ -1,12 +1,12 @@
 extends layout
 block content
 	ul.list-group
-		each task in tasks
+		each task,inx in tasks
 			li.list-group-item
 				if task.completed
-					s(data-completed='true')= task.title
+					s(id=task._id || inx, data-completed='true')= task.title
 				else
-					a(data-completed='false')= task.title
+					a(id=task._id || inx,data-completed='false')= task.title
 	div		
 		form.form-inline(method="post")
 			div.form-group

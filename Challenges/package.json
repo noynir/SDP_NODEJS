@@ -5,10 +5,13 @@
   "scripts": {
     "start": "node ./bin/www"
   },
-  "dependencies": {  
+  "dependencies": {
     "grunt": "^0.4.5",
     "grunt-express-server": "^0.5.1",
     "grunt-keepalive": "0.0.1",
-    "grunt-open": "^0.2.3"  
+    "grunt-open": "^0.2.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
   }
 }

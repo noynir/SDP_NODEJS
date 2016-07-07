@@ -6,7 +6,7 @@
 				$.ajax({
 					url:"tasks/setCompleted",
 					type:"POST",
-					data:{title:elm.html(), completed:!completed}
+					data:{ id:elm.attr('id'),title:elm.html(), completed:!completed}
 				}).success(function(data){
 					if(data.success){
 						var html=elm.html();

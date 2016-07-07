@@ -1,20 +1,17 @@
 var express = require('express');
 var path = require("path");
 var app = express();
-app.set("view engine","jade");
-app.set("views",path.join(__dirname,"views"));
 
-app.get('/',function(req,res,next){
-  res.send("Hello Express");
-});
-app.get('/page1',function(req,res,next){
-  res.render("index",{ products:["car","phone","banana"] });
-});
 
-app.get('/products/:id/:name?',function(req,res,next){
-  req.params.name = req.params.name || "null"
-  res.send("Params, Id:"+req.params.id + " name: "+req.params.name+" param:"+req.query.param);
-});
+
+
+
+
+
+
+
+
+
 
 
 
